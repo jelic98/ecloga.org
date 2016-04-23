@@ -1,0 +1,44 @@
+@import url(https://fonts.googleapis.com/css?family=Inconsolata);
+
+body {
+	background: #054F67;  
+	font-family: 'Inconsolata';
+	text-transform: uppercase;
+}
+
+#center {
+	position: absolute;
+	margin: auto;
+	display: inline-block;
+	top: 0;
+	right: 0;
+	bottom: 0;
+	left: 0;
+	width: 50vw;
+	height: 50vh;
+	color: #bdc3c7;
+	white-space:nowrap;
+}
+
+h1, h2, p {
+	padding: 0;
+	font-size: 3.23vw;
+	color: #fff;
+	display: inline;
+}
+
+span {
+	cursor: pointer;
+}
+
+br {
+	line-height: 1vmin;
+}
+
+p {
+	color: #bdc3c7;
+}
+
+a {
+	text-decoration: none;
+}

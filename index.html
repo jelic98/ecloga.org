@@ -1,0 +1,133 @@
+<!DOCTYPE HTML>
+<html>
+	<head>
+		<link rel="icon" href="images/favicon.ico" type="icon/ico">
+		<link rel="stylesheet" href="style.css" type="text/css">
+		<title>Ecloga Apps</title>
+		<meta name="viewport" content="width=device-width, initial-scale=1">
+		<meta itemprop="name" content="Ecloga Apps">
+		<meta itemprop="description" content="Ecloga Apps official website">
+		<meta itemprop="image" content="images/logo.png">
+		<meta name="author" content="Lazar Jelic">
+		<meta name="keywords" content="ecloga,apps,software,web,development">
+		<meta name="twitter:title" content="Ecloga Apps">
+		<meta name="twitter:description" content="Ecloga Apps official website">
+		<meta name="twitter:image:src" content="images/logo.png">
+		<meta property="og:title" content="Ecloga Apps">
+		<meta property="og:type" content="website">
+		<meta property="og:url" content="http://www.ecloga.org/">
+		<meta property="og:image" content="images/logo.png">
+		<meta property="og:description" content="Ecloga Apps official website">
+		<meta property="og:site_name" content="ecloga.org">
+		<meta name="description" content="Ecloga Apps official website">
+		<script src="jquery-1.12.3.min.js"></script>
+	</head>
+	<body>
+		<div id="center">
+			<div itemscope itemtype ="http://schema.org/Organization">
+				<span id="top"><h1><span itemprop="legalName">Ecloga Apps</span></h1><p> is a small software<br/>development company from <span itemprop="location">Serbia</span></p></span>
+				<br/>
+				<span id="middle"><p>Check out our </p><h2>Portfolio</h2><p> and you<br/>will definitely want to hire us</p></span>
+				<span id="portfolio"><br/><a id="portfolio1" href="https://play.google.com/store/apps/details?id=keyboard.ecloga.com.eclogakeyboard"><p>Ecloga Keyboard</p></a><br/><a id="portfolio2" href="https://play.google.com/store/apps/details?id=ecloga.com.eclogaflashlight"><p>Ecloga Flashlight</p></a><br/><a id="portfolio3" href="http://www.ecloga.org/ocene/"><p>Cloud Ocene</p></a></span>
+				<br/>
+				<span id="bottom"><p>Or </p><h2>Contact</h2><p> us if you already do</p></span>
+				<span id="contact"><br/><a id="contact1" href="mailto:jelic.ecloga@gmail.com"><p><span itemprop="email">jelic.ecloga@gmail.com</span></p></a><br/><a id="contact2" href="tel:+381614437010"><p><span itemprop="telephone">+381 61 443 7010</span></p></a></span>
+			</div>
+		</div>
+		<script>
+			$(document).ready(function() {
+				$("#top").fadeTo(0 ,0.5);
+				$("#middle").fadeTo(0 ,0.5);
+				$("#portfolio").fadeOut(0, 0.0);
+				$("#bottom").fadeTo(0 ,0.5);
+				$("#contact").fadeOut(0, 0.0);
+				$("#portfolio1").fadeTo(0, 0.5);
+				$("#portfolio2").fadeTo(0, 0.5);
+				$("#portfolio3").fadeTo(0, 0.5);
+				$("#contact1").fadeTo(0, 0.5);
+				$("#contact2").fadeTo(0, 0.5);
+			});
+
+			$("#top").on({
+				mouseenter: function () {
+					$("#top").fadeTo(125, 1);
+				}, mouseleave: function () {
+					$("#top").fadeTo(125, 0.5);
+				}
+			});
+
+			$("#middle").on({
+				mouseenter: function () {
+					$("#middle").fadeTo(125, 1);
+				}, mouseleave: function () {
+					$("#middle").fadeTo(125, 0.5);
+				}
+			});
+
+			$("#bottom").on({
+				mouseenter: function () {
+					$("#bottom").fadeTo(125, 1);
+				}, mouseleave: function () {
+					$("#bottom").fadeTo(125, 0.5);
+				}
+			});
+
+			$("#top").click(function() {
+				$("#contact").fadeOut(125);
+				$("#bottom").fadeOut(125);
+				$("#portfolio").delay(125).fadeOut(125);
+				$("#middle").delay(125).fadeOut(125);
+				$("#middle").delay(250).fadeIn(125);
+				$("#bottom").delay(500).fadeIn(125);
+			});
+
+			$("#middle").click(function() {
+				$("#portfolio").fadeToggle(125);
+			});
+
+			$("#bottom").click(function() {
+				$("#contact").fadeToggle(125);
+			});
+
+			$("#portfolio1").on({
+				mouseenter: function () {
+					$("#portfolio1").fadeTo(125, 1);
+				}, mouseleave: function () {
+					$("#portfolio1").fadeTo(125, 0.5);
+				}
+			});
+
+			$("#portfolio2").on({
+				mouseenter: function () {
+					$("#portfolio2").fadeTo(125, 1);
+				}, mouseleave: function () {
+					$("#portfolio2").fadeTo(125, 0.5);
+				}
+			});
+
+			$("#portfolio3").on({
+				mouseenter: function () {
+					$("#portfolio3").fadeTo(125, 1);
+				}, mouseleave: function () {
+					$("#portfolio3").fadeTo(125, 0.5);
+				}
+			});
+
+			$("#contact1").on({
+				mouseenter: function () {
+					$("#contact1").fadeTo(125, 1);
+				}, mouseleave: function () {
+					$("#contact1").fadeTo(125, 0.5);
+				}
+			});
+
+			$("#contact2").on({
+				mouseenter: function () {
+					$("#contact2").fadeTo(125, 1);
+				}, mouseleave: function () {
+					$("#contact2").fadeTo(125, 0.5);
+				}
+			});
+		</script>
+	</body>
+</html>
