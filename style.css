@@ -18,6 +18,8 @@ body {
 	height: 50vh;
 	color: #bdc3c7;
 	white-space:nowrap;
+	text-align: justify;
+	text-align-last: justify;
 }
 
 h1, h2, p {
