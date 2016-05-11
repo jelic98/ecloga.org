@@ -1,5 +1,13 @@
 @import url(https://fonts.googleapis.com/css?family=Inconsolata);
 
+::-moz-selection {
+	background-color: #054F67;
+}
+
+::selection {
+	background-color: #054F67;
+}
+
 body {
 	background: #054F67;  
 	font-family: 'Inconsolata';
