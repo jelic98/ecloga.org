@@ -50,6 +50,10 @@
 					<a id="portfolio3" href="http://www.ecloga.org/ytbot/">
 						<p>YT.Bot</p>
 					</a>
+					<br/>
+					<a id="portfolio4" href="http://www.ecloga.org/game/">
+						<p>Game.of.Life</p>
+					</a>
 				</span>
 				<br/>
 				<span id="bottom">
@@ -80,6 +84,7 @@
 				$("#portfolio1").fadeTo(0, 0.5);
 				$("#portfolio2").fadeTo(0, 0.5);
 				$("#portfolio3").fadeTo(0, 0.5);
+				$("#portfolio4").fadeTo(0, 0.5);
 				$("#contact1").fadeTo(0, 0.5);
 				$("#contact2").fadeTo(0, 0.5);
 			});
@@ -146,6 +151,14 @@
 					$("#portfolio3").fadeTo(50, 1);
 				}, mouseleave: function () {
 					$("#portfolio3").fadeTo(50, 0.5);
+				}
+			});
+
+			$("#portfolio4").on({
+				mouseenter: function () {
+					$("#portfolio4").fadeTo(50, 1);
+				}, mouseleave: function () {
+					$("#portfolio4").fadeTo(50, 0.5);
 				}
 			});
 
