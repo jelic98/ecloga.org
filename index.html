@@ -78,6 +78,7 @@
 				</span>
 			</div>
 		</div>
+		<div id="pointer"></div>
 		<script>
 			$(document).ready(function() {
 				$("#top").fadeTo(0 ,0.5);
@@ -92,6 +93,10 @@
 				$("#portfolio5").fadeTo(0, 0.5);
 				$("#contact1").fadeTo(0, 0.5);
 				$("#contact2").fadeTo(0, 0.5);
+			});
+
+			$(document).mousemove(function(e){
+				$("#pointer").css({left:e.pageX, top:e.pageY});
 			});
 
 			$("#top").on({
@@ -166,7 +171,7 @@
 					$("#portfolio4").fadeTo(50, 0.5);
 				}
 			});
-			
+
 			$("#portfolio5").on({
 				mouseenter: function () {
 					$("#portfolio5").fadeTo(50, 1);

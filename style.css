@@ -8,10 +8,23 @@
 	background-color: #054F67;
 }
 
+html {
+	cursor: none;
+}
+
 body {
 	background: #054F67;  
 	font-family: 'Inconsolata';
 	text-transform: uppercase;
+}
+
+#pointer {
+	position: absolute;
+	z-index: 1;
+	height: 2vmin;
+	width: 2vmin;
+	border-radius: 50%;
+	background: #ecf0f1;
 }
 
 #center {
@@ -35,10 +48,6 @@ h1, h2, p {
 	font-size: 3.23vw;
 	color: #fff;
 	display: inline;
-}
-
-span {
-	cursor: pointer;
 }
 
 br {
