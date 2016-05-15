@@ -4,7 +4,7 @@
 		<link rel="icon" href="images/favicon.ico" type="icon/ico">
 		<link rel="stylesheet" href="style.css" type="text/css">
 		<title>Ecloga Apps</title>
-		<meta name="viewport" content="width=device-width, initial-scale=1">
+		<meta name="viewport" content="width=device-width" initial-scale="1.0">
 		<meta itemprop="name" content="Ecloga Apps">
 		<meta itemprop="description" content="Ecloga Apps official website">
 		<meta itemprop="image" content="images/logo.png">
@@ -30,170 +30,134 @@
 						<span itemprop="legalName">Ecloga Apps</span>
 					</h1>
 					<p> is a small software<br/>development company from <span itemprop="location">Serbia</span></p>
+					<br/>
 				</span>
-				<br/>
 				<span id="middle">
 					<p>Check out our </p>
 					<h2>Portfolio</h2>
 					<p> and you<br/>will definitely want to hire us</p>
+					<br/>
 				</span>
-				<span id="portfolio">
+				<a id="keyboard" href="https://play.google.com/store/apps/details?id=keyboard.ecloga.com.eclogakeyboard">
+					<p>Ecloga.Keyboard</p>
 					<br/>
-					<a id="portfolio1" href="https://play.google.com/store/apps/details?id=keyboard.ecloga.com.eclogakeyboard">
-						<p>Ecloga.Keyboard</p>
-					</a>
+				</a>
+				<a id="ocene" href="http://www.ecloga.org/ocene">
+					<p>Cloud.Ocene</p>
 					<br/>
-					<a id="portfolio2" href="http://www.ecloga.org/ocene/">
-						<p>Cloud.Ocene</p>
-					</a>
+				</a>
+				<a id="ytbot" href="http://www.ecloga.org/ytbot">
+					<p>YT.Bot</p>
 					<br/>
-					<a id="portfolio3" href="http://www.ecloga.org/ytbot/">
-						<p>YT.Bot</p>
-					</a>
+				</a>
+				<a id="game" href="http://www.ecloga.org/game">
+					<p>Game.of.Life</p>
 					<br/>
-					<a id="portfolio4" href="http://www.ecloga.org/game/">
-						<p>Game.of.Life</p>
-					</a>
+				</a>
+				<a id="optika" href="http://www.ecloga.org/optika">
+					<p>Optika</p>
 					<br/>
-					<a id="portfolio5" href="http://www.ecloga.org/mess/">
-						<p>What.a.Mess</p>
-					</a>
-				</span>
-				<br/>
+				</a>
+				<a id="bottle" href="https://play.google.com/store/apps/details?id=ecloga.com.bottlegame">
+					<p>Bottle.Game</p>
+					<br/>
+				</a>
+				<a id="flashlight" href="https://play.google.com/store/apps/details?id=ecloga.com.eclogaflashlight">
+					<p>Ecloga.Flashlight</p>
+					<br/>
+				</a>
+				<a id="mess" href="http://www.ecloga.org/mess">
+					<p>What.a.Mess</p>
+					<br/>
+				</a>
 				<span id="bottom">
 					<h2>Contact</h2>
 					<p> us if you are interested</p>
-				</span>
-				<span id="contact">
 					<br/>
-					<a id="contact1" href="mailto:jelic.ecloga@gmail.com">
-						<p><span itemprop="email">jelic.ecloga@gmail.com</span></p>
-					</a>
-					<br/>
-					<a id="contact2" href="tel:+381614437010">
-						<p>
-							<span itemprop="telephone">+381614437010</span>
-						</p>
-					</a>
 				</span>
+				<a id="email" href="mailto:jelic.ecloga@gmail.com">
+					<p>
+						<span itemprop="email">jelic.ecloga@gmail.com</span>
+					</p>
+					<br/>
+				</a>
+				<a id="phone" href="tel:+381614437010">
+					<p>
+						<span itemprop="telephone">+381614437010</span>
+					</p>
+				</a>
 			</div>
 		</div>
 		<div id="pointer"></div>
 		<script>
+			var sections = ["top", "middle", "bottom"];
+			var projects = ["keyboard", "ocene", "ytbot", "game", "optika", "bottle", "flashlight", "mess"];
+			var contacts = ["email", "phone"];
+			var invisibles = projects.concat(contacts);
+			var all = invisibles.concat(sections);
+
 			$(document).ready(function() {
-				$("#top").fadeTo(0 ,0.5);
-				$("#middle").fadeTo(0 ,0.5);
-				$("#portfolio").fadeOut(0, 0.0);
-				$("#bottom").fadeTo(0 ,0.5);
-				$("#contact").fadeOut(0, 0.0);
-				$("#portfolio1").fadeTo(0, 0.5);
-				$("#portfolio2").fadeTo(0, 0.5);
-				$("#portfolio3").fadeTo(0, 0.5);
-				$("#portfolio4").fadeTo(0, 0.5);
-				$("#portfolio5").fadeTo(0, 0.5);
-				$("#contact1").fadeTo(0, 0.5);
-				$("#contact2").fadeTo(0, 0.5);
-			});
+				sections.forEach(function(element) {
+					$("#" + element).fadeTo(1000, 0.5);
 
-			$(document).mousemove(function(e){
-				$("#pointer").css({left:e.pageX, top:e.pageY});
-			});
+					$("#" + element).click(function() {  
+						switch(element) {
+							case "top":
+								sections.forEach(function(inner) {
+									if(inner == "middle") {
+										projects.forEach(function(inner2) {
+											$("#" + inner2).fadeOut(50);
+										});
 
-			$("#top").on({
-				mouseenter: function () {
-					$("#top").fadeTo(50, 1);
-				}, mouseleave: function () {
-					$("#top").fadeTo(50, 0.5);
-				}
-			});
+										$("#" + inner).stop().fadeOut(50).delay(100).fadeIn(100);
+									}else if(inner == "bottom") {
+										contacts.forEach(function(inner2) {
+											$("#" + inner2).fadeOut(50);
+										});
 
-			$("#middle").on({
-				mouseenter: function () {
-					$("#middle").fadeTo(50, 1);
-				}, mouseleave: function () {
-					$("#middle").fadeTo(50, 0.5);
-				}
-			});
+										$("#" + inner).stop().fadeOut(50).delay(100).fadeIn(100);
+									}						
+								});
+								break;
+							case "middle":
+								projects.forEach(function(inner) {
+									if($("#" + inner).css("display") == "none") {
+										$("#" + inner).fadeTo(50, 0.5);
+									}else { 
+										$("#" + inner).fadeOut(50, 0);	
+									}							
+								});
+								break;
+							case "bottom":
+								contacts.forEach(function(inner) {
+									if($("#" + inner).css("display") == "none") {
+										$("#" + inner).fadeTo(50, 0.5);
+									}else {
+										$("#" + inner).fadeOut(50, 0);	
+									}							
+								});
+								break;
+						}
+					});
+				});
 
-			$("#bottom").on({
-				mouseenter: function () {
-					$("#bottom").fadeTo(50, 1);
-				}, mouseleave: function () {
-					$("#bottom").fadeTo(50, 0.5);
-				}
-			});
+				invisibles.forEach(function(element) {
+					$("#" + element).hide();
+				});
 
-			$("#top").click(function() {
-				$("#contact").fadeOut(125);
-				$("#bottom").fadeOut(125);
-				$("#portfolio").delay(125).fadeOut(125);
-				$("#middle").delay(125).fadeOut(125);
-				$("#middle").delay(250).fadeIn(125);
-				$("#bottom").delay(500).fadeIn(125);
-			});
+				all.forEach(function(element) {
+					$("#" + element).on({
+						mouseenter: function () {
+							$("#" + element).fadeTo(50, 1);
+						}, mouseleave: function () {
+							$("#" + element).fadeTo(50, 0.5);
+						}
+					});
+				});
 
-			$("#middle").click(function() {
-				$("#portfolio").fadeToggle(50);
-			});
-
-			$("#bottom").click(function() {
-				$("#contact").fadeToggle(50);
-			});
-
-			$("#portfolio1").on({
-				mouseenter: function () {
-					$("#portfolio1").fadeTo(50, 1);
-				}, mouseleave: function () {
-					$("#portfolio1").fadeTo(50, 0.5);
-				}
-			});
-
-			$("#portfolio2").on({
-				mouseenter: function () {
-					$("#portfolio2").fadeTo(50, 1);
-				}, mouseleave: function () {
-					$("#portfolio2").fadeTo(50, 0.5);
-				}
-			});
-
-			$("#portfolio3").on({
-				mouseenter: function () {
-					$("#portfolio3").fadeTo(50, 1);
-				}, mouseleave: function () {
-					$("#portfolio3").fadeTo(50, 0.5);
-				}
-			});
-
-			$("#portfolio4").on({
-				mouseenter: function () {
-					$("#portfolio4").fadeTo(50, 1);
-				}, mouseleave: function () {
-					$("#portfolio4").fadeTo(50, 0.5);
-				}
-			});
-
-			$("#portfolio5").on({
-				mouseenter: function () {
-					$("#portfolio5").fadeTo(50, 1);
-				}, mouseleave: function () {
-					$("#portfolio5").fadeTo(50, 0.5);
-				}
-			});
-
-			$("#contact1").on({
-				mouseenter: function () {
-					$("#contact1").fadeTo(50, 1);
-				}, mouseleave: function () {
-					$("#contact1").fadeTo(50, 0.5);
-				}
-			});
-
-			$("#contact2").on({
-				mouseenter: function () {
-					$("#contact2").fadeTo(50, 1);
-				}, mouseleave: function () {
-					$("#contact2").fadeTo(50, 0.5);
-				}
+				$(document).mousemove(function(e){
+					$("#pointer").css({left:e.pageX, top:e.pageY});
+				});
 			});
 		</script>
 	</body>
