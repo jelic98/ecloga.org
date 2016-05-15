@@ -122,16 +122,16 @@
 								sections.forEach(function(inner) {
 									if(inner == "middle") {
 										projects.forEach(function(inner2) {
-											$("#" + inner2).finish().delay(250).fadeOut(0, 0);
+											$("#" + inner2).finish().delay(500).fadeOut(250, 0);
 										});
 
-										$("#" + inner).finish().delay(375).fadeTo(125, 0).delay(250).fadeTo(125, 0.5);
+										$("#" + inner).finish().delay(750).fadeTo(250, 0).delay(250).fadeTo(250, 0.5);
 									}else if(inner == "bottom") {
 										contacts.forEach(function(inner2) {
-											$("#" + inner2).finish().fadeOut(0, 0);
+											$("#" + inner2).finish().fadeOut(250, 0);
 										});
 
-										$("#" + inner).finish().delay(125).fadeTo(125, 0).delay(500).fadeTo(125, 0.5);
+										$("#" + inner).finish().delay(250).fadeTo(250, 0).delay(1000).fadeTo(250, 0.5);
 									}
 								});
 								break;
@@ -164,9 +164,9 @@
 				all.forEach(function(element) {
 					$("#" + element).on({
 						mouseenter: function () {
-							$("#" + element).fadeTo(50, 1);
+							$("#" + element).finish().fadeTo(500, 1);
 						}, mouseleave: function () {
-							$("#" + element).fadeTo(50, 0.5);
+							$("#" + element).finish().fadeTo(500, 0.5);
 						}
 					});
 				});
