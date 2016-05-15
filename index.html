@@ -24,64 +24,64 @@
 	</head>
 	<body>
 		<div id="center">
-			<div itemscope itemtype ="http://schema.org/Organization">
-				<span id="top">
+			<div itemscope itemtype="http://schema.org/Organization">
+				<span class="section" id="top">
 					<h1>
 						<span itemprop="legalName">Ecloga Apps</span>
 					</h1>
 					<p> is a small software<br/>development company from <span itemprop="location">Serbia</span></p>
 					<br/>
 				</span>
-				<span id="middle">
+				<span class="section" id="middle">
 					<p>Check out our </p>
 					<h2>Portfolio</h2>
 					<p> and you<br/>will definitely want to hire us</p>
 					<br/>
 				</span>
-				<a id="keyboard" href="https://play.google.com/store/apps/details?id=keyboard.ecloga.com.eclogakeyboard">
+				<a class="project" id="keyboard" href="https://play.google.com/store/apps/details?id=keyboard.ecloga.com.eclogakeyboard">
 					<p>Ecloga.Keyboard</p>
 					<br/>
 				</a>
-				<a id="ocene" href="http://www.ecloga.org/ocene">
+				<a class="project" id="ocene" href="http://www.ecloga.org/ocene">
 					<p>Cloud.Ocene</p>
 					<br/>
 				</a>
-				<a id="ytbot" href="http://www.ecloga.org/ytbot">
+				<a class="project" id="ytbot" href="http://www.ecloga.org/ytbot">
 					<p>YT.Bot</p>
 					<br/>
 				</a>
-				<a id="game" href="http://www.ecloga.org/game">
+				<a class="project" id="game" href="http://www.ecloga.org/game">
 					<p>Game.of.Life</p>
 					<br/>
 				</a>
-				<a id="optika" href="http://www.ecloga.org/optika">
+				<a class="project" id="optika" href="http://www.ecloga.org/optika">
 					<p>Optika</p>
 					<br/>
 				</a>
-				<a id="bottle" href="https://play.google.com/store/apps/details?id=ecloga.com.bottlegame">
+				<a class="project" id="bottle" href="https://play.google.com/store/apps/details?id=ecloga.com.bottlegame">
 					<p>Bottle.Game</p>
 					<br/>
 				</a>
-				<a id="flashlight" href="https://play.google.com/store/apps/details?id=ecloga.com.eclogaflashlight">
+				<a class="project" id="flashlight" href="https://play.google.com/store/apps/details?id=ecloga.com.eclogaflashlight">
 					<p>Ecloga.Flashlight</p>
 					<br/>
 				</a>
-				<a id="mess" href="http://www.ecloga.org/mess">
+				<a class="project" id="mess" href="http://www.ecloga.org/mess">
 					<p>What.a.Mess</p>
 					<br/>
 				</a>
-				<span id="bottom">
+				<span class="section" id="bottom">
 					<h2>Contact</h2>
 					<p> us if you are interested</p>
 					<br/>
 				</span>
-				<a id="email" href="mailto:jelic.ecloga@gmail.com">
+				<a class="contact" id="email" href="mailto:jelic.ecloga@gmail.com">
 					<p>
 						<span itemprop="email">jelic.ecloga@gmail.com</span>
 					</p>
 					<br/>
 				</a>
-				<a id="phone" href="tel:+381614437010">
+				<a class="contact" id="phone" href="tel:+381614437010">
 					<p>
 						<span itemprop="telephone">+381614437010</span>
 					</p>
@@ -90,9 +90,25 @@
 		</div>
 		<div id="pointer"></div>
 		<script>
-			var sections = ["top", "middle", "bottom"];
-			var projects = ["keyboard", "ocene", "ytbot", "game", "optika", "bottle", "flashlight", "mess"];
-			var contacts = ["email", "phone"];
+			var sections = new Array();
+			var projects = new Array();
+			var contacts = new Array();
+
+			$(".section").each(function() {
+				var id = $(this).attr("id");
+				sections.push(id);
+			});
+
+			$(".project").each(function() {
+				var id = $(this).attr("id");
+				projects.push(id);
+			});
+
+			$(".contact").each(function() {
+				var id = $(this).attr("id");
+				contacts.push(id);
+			});
+
 			var invisibles = projects.concat(contacts);
 			var all = invisibles.concat(sections);
 
