@@ -1,73 +1,73 @@
 @import url(https://fonts.googleapis.com/css?family=Raleway:500);
-
 ::-moz-selection {
-	background-color: #054F67;
+    background-color: #054F67;
 }
 
 ::selection {
-	background-color: #054F67;
+    background-color: #054F67;
 }
 
 html {
-	cursor: none;
+    cursor: none;
 }
 
 body {
-	background: #054F67;  
-	font-family: 'Raleway', sans-serif;
-	text-transform: uppercase;
+    background: #054F67;
+    font-family: 'Raleway', sans-serif;
+    text-transform: uppercase;
 }
 
 #pointer {
-	position: absolute;
-	z-index: 1;
-	height: 2.5vh;
-	width: 2.5vh;
-	border-radius: 50%;
-	background: #ecf0f1;
+    position: absolute;
+    z-index: 1;
+    height: 2.5vh;
+    width: 2.5vh;
+    border-radius: 50%;
+    background: #ecf0f1;
 }
 
 #center {
-	position: absolute;
-	margin: auto;
-	display: inline-block;
-	top: 0;
-	right: 0;
-	bottom: 0;
-	left: 0;
-	width: 40vw;
-	height: 45vh;
-	color: #fff;
-	white-space:nowrap;
-	text-align: justify;
-	text-align-last: justify;
+    position: absolute;
+    margin: auto;
+    display: inline-block;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    width: 40vw;
+    height: 45vh;
+    color: #fff;
+    white-space: nowrap;
+    text-align: justify;
+    text-align-last: justify;
 }
 
-h1, h2, p {
-	padding: 0;
-	font-size: 2vw;
-	display: inline;
+h1,
+h2,
+p {
+    padding: 0;
+    font-size: 2vw;
+    display: inline;
 }
 
 p {
-	color: #ecf0f1;
+    color: #ecf0f1;
 }
 
 br {
-	line-height: 0vw;
+    line-height: 0vw;
 }
 
 a {
-	text-decoration: none;
-	cursor: none;
+    text-decoration: none;
+    cursor: none;
 }
 
 @media screen and (min-width: 0px) and (max-width: 720px) {
-	body {
-		zoom: 150%;
-	} 
-
-	#pointer {
-		display: none;
-	}
+    body {
+        zoom: 150%;
+    }
+    #pointer {
+        display: none;
+    }
 }
