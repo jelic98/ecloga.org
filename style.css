@@ -1,10 +1,12 @@
-@import url(https://fonts.googleapis.com/css?family=Raleway:500);
+@import url(https://fonts.googleapis.com/css?family=Raleway:600);
+@import url(https://fonts.googleapis.com/css?family=Raleway:800);
+
 ::-moz-selection {
-    background-color: #054F67;
+    background-color: #000;
 }
 
 ::selection {
-    background-color: #054F67;
+    background-color: #000;
 }
 
 html {
@@ -12,7 +14,7 @@ html {
 }
 
 body {
-    background: #054F67;
+	background: #fff;
     font-family: 'Raleway', sans-serif;
     text-transform: uppercase;
 }
@@ -23,7 +25,7 @@ body {
     height: 2.5vh;
     width: 2.5vh;
     border-radius: 50%;
-    background: #ecf0f1;
+    background: #000;
 }
 
 #center {
@@ -36,7 +38,7 @@ body {
     left: 0;
     width: 40vw;
     height: 45vh;
-    color: #fff;
+    color: #000;
     white-space: nowrap;
     text-align: justify;
     text-align-last: justify;
@@ -50,8 +52,12 @@ p {
     display: inline;
 }
 
+h2 {
+	text-decoration: bold;	
+}
+
 p {
-    color: #ecf0f1;
+    color: #000;
 }
 
 br {
@@ -67,7 +73,5 @@ a {
     body {
         zoom: 150%;
     }
-    #pointer {
-        display: none;
     }
 }
