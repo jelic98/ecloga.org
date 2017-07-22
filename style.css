@@ -2,11 +2,11 @@
 @import url(https://fonts.googleapis.com/css?family=Raleway:800);
 
 ::-moz-selection {
-    background-color: #000;
+    background-color: #fff;
 }
 
 ::selection {
-    background-color: #000;
+    background-color: #fff;
 }
 
 html {
@@ -14,7 +14,7 @@ html {
 }
 
 body {
-	background: #fff;
+	background: #000;
     font-family: 'Raleway', sans-serif;
     text-transform: uppercase;
 }
@@ -25,7 +25,7 @@ body {
     height: 2.5vh;
     width: 2.5vh;
     border-radius: 50%;
-    background: #000;
+    background: #fff;
 }
 
 #center {
@@ -38,7 +38,7 @@ body {
     left: 0;
     width: 40vw;
     height: 45vh;
-    color: #000;
+    color: #fff;
     white-space: nowrap;
     text-align: justify;
     text-align-last: justify;
@@ -57,7 +57,7 @@ h2 {
 }
 
 p {
-    color: #000;
+    color: #fff;
 }
 
 br {
