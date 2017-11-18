@@ -36,8 +36,8 @@ body {
     right: 0;
     bottom: 0;
     left: 0;
-    width: 40vw;
-    height: 45vh;
+    width: 60vw;
+    height: 53vh;
     color: #fff;
     white-space: nowrap;
     text-align: justify;
@@ -46,22 +46,17 @@ body {
 
 h1,
 h2,
-p {
+p,
+a {
     padding: 0;
-    font-size: 2vw;
+    color: #fff;
+    font-size: 3vw;
     display: inline;
+	line-height: 1.9vw;
 }
 
 h2 {
 	text-decoration: bold;	
-}
-
-p {
-    color: #fff;
-}
-
-br {
-    line-height: 0vw;
 }
 
 a {
@@ -70,8 +65,28 @@ a {
 }
 
 @media screen and (min-width: 0px) and (max-width: 720px) {
-    body {
-        zoom: 150%;
+	html {
+		cursor: auto;	
+	}
+
+	#center {
+		width: 91vw;
+		height: 40vh;
+	}
+
+    #pointer {
+        visibility: hidden;
     }
+ 
+	h1,
+	h2,
+	p,
+	a {
+    	font-size: 4.6vw;
+		line-height: 2.9vw;
+	}
+
+    a {
+        cursor: auto;
     }
 }
