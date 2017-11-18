@@ -36,8 +36,8 @@ body {
     right: 0;
     bottom: 0;
     left: 0;
-    width: 58vw;
-    height: 53vh;
+    width: 45vw;
+    height: 65vh;
     color: #fff;
     white-space: nowrap;
     text-align: justify;
@@ -50,9 +50,9 @@ p,
 a {
     padding: 0;
     color: #fff;
-    font-size: 3vw;
+    font-size: 4vw;
     display: inline;
-	line-height: 1.9vw;
+	line-height: 2.8vw;
 }
 
 h2 {
@@ -70,8 +70,8 @@ a {
 	}
 
 	#center {
-		width: 89vw;
-		height: 40vh;
+		width: 65vw;
+		height: 60vh;
 	}
 
     #pointer {
@@ -82,8 +82,8 @@ a {
 	h2,
 	p,
 	a {
-    	font-size: 4.6vw;
-		line-height: 2vw;
+    	font-size: 6vw;
+		line-height: 4vw;
 	}
 
     a {
