@@ -1,12 +1,16 @@
 @import url(https://fonts.googleapis.com/css?family=Raleway:600);
 @import url(https://fonts.googleapis.com/css?family=Raleway:800);
 
-::-moz-selection {
-    background-color: #fff;
+::selection {
+	background:none;
 }
 
-::selection {
-    background-color: #fff;
+::-moz-selection {
+	background: none;
+}
+
+::-webkit-selection {
+	background:none;
 }
 
 html {
@@ -30,18 +34,18 @@ body {
 
 #center {
     position: absolute;
-    margin: auto;
+	margin: auto;
     display: inline-block;
     top: 0;
     right: 0;
     bottom: 0;
     left: 0;
     width: 45vw;
-    height: 65vh;
-    color: #fff;
-    white-space: nowrap;
+    height: 70vh;
+	white-space: nowrap;
     text-align: justify;
     text-align-last: justify;
+    color: #fff;
 }
 
 h1,
@@ -62,6 +66,10 @@ h2 {
 a {
     text-decoration: none;
     cursor: none;
+}
+
+a > p {
+	padding-left: 2.8vw;	
 }
 
 @media screen and (min-width: 0px) and (max-width: 720px) {

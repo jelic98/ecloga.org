@@ -3,9 +3,10 @@
 
 <head>
     <link rel="icon" href="images/favicon.ico" type="icon/ico">
-    <link rel="stylesheet" href="style.css" type="text/css">
+    <link rel="stylesheet" href="main.css" type="text/css">
     <title>Ecloga Apps</title>
     <script src="jquery-1.12.3.min.js"></script>
+	<script src="main.js"></script>
 
     <!-- SEO stuff -->
     <meta name="viewport" content="width=device-width" initial-scale="1.0">
@@ -25,162 +26,48 @@
     <meta property="og:site_name" content="ecloga.org">
     <meta name="description" content="Ecloga Apps official website">
 </head>
-
 <body>
     <div id="center">
         <div itemscope itemtype="http://schema.org/Organization">
-            <span class="section" id="top">
-				<h1>
-					<span itemprop="legalName">ecloga Apps</span>
-            	</h1>
-            	<p>makes<br/>badass software</span></p>
-            	<br/>
-            </span>
-            <span class="section" id="middle">
-					<p>see our</p>
-					<h2>portfolio</h2>
-					<p><br/>and be fascinated</p>
-					<br/>
-				</span>
-            <a class="project" id="keyboard" href="https://play.google.com/store/apps/details?id=keyboard.ecloga.com.eclogakeyboard">
-                <p>Ecloga-Keyboard</p>
-                <br/>
+			<h1><span itemprop="legalName">ecloga apps</span></h1>
+            <p>makes<br/></p>
+			<p>badass software<br/></p>
+			<p>see our</p>
+			<h2>portfolio<br/></h2>
+			<p>and be fascinated<br/></p>
+            <a href="https://play.google.com/store/apps/details?id=keyboard.ecloga.com.eclogakeyboard">
+                <p>Ecloga-Keyboard<br/></p>
             </a>
-            <a class="project" id="ocene" href="http://www.ecloga.org/ocene">
-                <p>Cloud-Ocene</p>
-                <br/>
+            <a href="http://www.ecloga.org/ocene">
+                <p>Cloud-Ocene<br/></p>
             </a>
-            <a class="project" id="game" href="http://www.ecloga.org/game">
-                <p>Game-of-Life</p>
-                <br/>
+            <a href="http://www.ecloga.org/game">
+                <p>Game-of-Life<br/></p>
             </a>
-            <a class="project" id="orbitals" href="http://www.ecloga.org/orbitals">
-                <p>Orbitals</p>
-                <br/>
+            <a href="http://www.ecloga.org/orbitals">
+                <p>Orbitals<br/></p>
             </a>
-            <a class="project" id="ajax" href="http://www.ecloga.org/ajax">
-                <p>AJAX-Player</p>
-                <br/>
+            <a href="http://www.ecloga.org/ajax">
+                <p>AJAX-Player<br/></p>
             </a>
-            <a class="project" id="mess" href="http://www.ecloga.org/mess">
-                <p>What-a-Mess</p>
-                <br/>
+            <a href="http://www.ecloga.org/mess">
+                <p>What-a-Mess<br/></p>
             </a>
-            <a class="project" id="more" href="https://github.com/jelic98">
-                <p>More-Projects</p>
-                <br/>
+            <a href="https://github.com/jelic98">
+                <p>More-Projects<br/></p>
             </a>
-
-            <span class="section" id="bottom">
-					<h2>meet</h2>
-					<p>us to share<br/>big ideas together</p>
-					<br/>
-				</span>
-            <a class="contact" id="email" href="mailto:jelic.ecloga@gmail.com">
-                <p>
-                    <span>jelic.ecloga<br/>@gmail.com</span>
-                </p>
-                <br/>
+			<h2>meet us</h2>
+			<p>to share<br/></p>
+			<p>big ideas together<br/></p>
+            <a href="mailto:jelic.ecloga@gmail.com">
+            	<p>jelic.ecloga<br/></p>
+				<p>@gmail.com<br/></p>
             </a>
-            <a class="contact" id="phone" href="tel:+381614437010">
-                <p>
-                    <span itemprop="telephone">+381614437010</span>
-                </p>
+            <a href="tel:+381614437010">
+                <p>+381614437010</p>
             </a>
         </div>
     </div>
     <div id="pointer"></div>
-    <script>
-        var sections = new Array();
-        var projects = new Array();
-        var contacts = new Array();
-
-        $(".section").each(function () {
-            var id = $(this).attr("id");
-            sections.push(id);
-        });
-
-        $(".project").each(function () {
-            var id = $(this).attr("id");
-            projects.push(id);
-        });
-
-        $(".contact").each(function () {
-            var id = $(this).attr("id");
-            contacts.push(id);
-        });
-
-        var invisibles = projects.concat(contacts);
-        var all = invisibles.concat(sections);
-
-        $(document).ready(function () {
-            sections.forEach(function (element) {
-                $("#" + element).fadeTo(500, 0.5);
-
-                $("#" + element).click(function () {
-                    switch (element) {
-                    case "top":
-                        sections.forEach(function (inner) {
-                            if (inner == "middle") {
-                                projects.forEach(function (inner2) {
-                                    $("#" + inner2).finish().delay(500).fadeOut(250, 0);
-                                });
-
-                                $("#" + inner).finish().delay(750).fadeTo(250, 0).delay(250).fadeTo(250, 0.5);
-                            } else if (inner == "bottom") {
-                                contacts.forEach(function (inner2) {
-                                    $("#" + inner2).finish().fadeOut(250, 0);
-                                });
-
-                                $("#" + inner).finish().delay(250).fadeTo(250, 0).delay(1000).fadeTo(250, 0.5);
-                            }
-                        });
-                        break;
-                    case "middle":
-                        projects.forEach(function (inner) {
-                            if ($("#" + inner).css("display") == "none") {
-                                $("#" + inner).fadeTo(0, 0.5);
-                            } else {
-                                $("#" + inner).fadeOut(0, 0);
-                            }
-                        });
-                        break;
-                    case "bottom":
-                        contacts.forEach(function (inner) {
-                            if ($("#" + inner).css("display") == "none") {
-                                $("#" + inner).fadeTo(0, 0.5);
-                            } else {
-                                $("#" + inner).fadeOut(0, 0);
-                            }
-                        });
-                        break;
-                    }
-                });
-            });
-
-            invisibles.forEach(function (element) {
-                $("#" + element).hide();
-            });
-
-            all.forEach(function (element) {
-                $("#" + element).on({
-                    mouseenter: function () {
-                        $("#" + element).finish().fadeTo(500, 1);
-                    },
-                    mouseleave: function () {
-                        $("#" + element).finish().fadeTo(500, 0.5);
-                    }
-                });
-            });
-
-            $(document).mousemove(function (e) {
-                $("#pointer").css({
-                    left: e.pageX,
-                    top: e.pageY
-                });
-            });
-        });
-    </script>
-</body>
-
+    </body>
 </html>
