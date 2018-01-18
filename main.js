@@ -9,12 +9,5 @@ $(document).ready(function() {
             $(e.target).finish().fadeTo(500, 0.5);
         }
     });
-
-    $(document).mousemove(function(e) {
-    	$("#pointer").css({
-        	left: e.pageX,
-            top: e.pageY
-        });
-    });
 });
 

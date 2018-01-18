@@ -10,10 +10,6 @@
 	background:none;
 }
 
-html {
-    cursor: none;
-}
-
 body {
 	background: #000;
     font-family: 'Raleway', sans-serif;
@@ -43,15 +39,6 @@ body {
     z-index: 0;
     background: #000;
 	opacity: 0.75;
-}
-
-#pointer {
-    position: absolute;
-    z-index: 1;
-    height: 2.5vh;
-    width: 2.5vh;
-    border-radius: 50%;
-    background: #fff;
 }
 
 #center {
@@ -89,7 +76,6 @@ h2 {
 
 a {
     text-decoration: none;
-    cursor: none;
 }
 
 a > p {
@@ -97,19 +83,11 @@ a > p {
 }
 
 @media screen and (min-width: 0px) and (max-width: 720px) {
-	html {
-		cursor: auto;	
-	}
-
 	#center {
 		width: 65vw;
 		height: 60vh;
 	}
 
-    #pointer {
-        visibility: hidden;
-    }
- 
 	h1,
 	h2,
 	p,
@@ -117,8 +95,4 @@ a > p {
     	font-size: 6vw;
 		line-height: 4vw;
 	}
-
-    a {
-        cursor: auto;
-    }
 }
