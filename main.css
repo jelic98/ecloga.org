@@ -64,6 +64,7 @@ body {
     height: 61vh;
 	white-space: nowrap;
     color: #fff;
+	text-align: center;
 }
 
 h1,
@@ -83,10 +84,6 @@ h2 {
 
 a {
     text-decoration: none;
-}
-
-a > p {
-	padding-left: 2.8vw;	
 }
 
 @media screen and (min-width: 0px) and (max-width: 720px) {
