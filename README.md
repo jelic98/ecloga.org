@@ -1,2 +1,5 @@
 # ecloga.org
-Ecloga Apps official website
+
+Presentation website for Ecloga Apps. Goal was to create minimal looking website as much as possible without sacrificing UX. Constantly updating.
+
+Done with HTML, CSS, jQuery.
