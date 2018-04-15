@@ -54,6 +54,7 @@ html {
 
 p,
 a {
+	width: auto;
 	display: block;
     padding: 0;
 	margin: 0;
